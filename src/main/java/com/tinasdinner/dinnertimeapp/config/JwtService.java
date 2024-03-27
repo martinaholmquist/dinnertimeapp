@@ -1,8 +1,9 @@
 package com.tinasdinner.dinnertimeapp.config;
 
 
-import com.tinasdinner.dinnertimeapp.models.User;
 
+
+import com.tinasdinner.dinnertimeapp.models.User;
 import com.tinasdinner.dinnertimeapp.token.TokenRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -73,7 +74,7 @@ public class JwtService {
     public String generateToken(User user) {
         Map<String, Object> claims = new HashMap<>();
         claims.put("Role", user.getRole());
-        claims.put("Username", user.getUsername());
+        claims.put("Username", user.getName()); //getUsername()
         return buildToken(claims, user, jwtExpiration);
     }
 

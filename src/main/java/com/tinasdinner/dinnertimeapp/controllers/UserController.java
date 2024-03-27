@@ -46,7 +46,7 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/currentuser")
+    @GetMapping("/currentuser")  //FUNKAR
     public ResponseEntity<UserViewRecord> CurrentUser(Principal connectedUser) {
         UserViewRecord currentUser = service.findConnectedUser(connectedUser);
         System.out.println("Här kommer en användares förnamn:" + currentUser.username());
@@ -97,6 +97,8 @@ public class UserController {
 
         return ResponseEntity.notFound().build();
     }
+
+
     @GetMapping("/cities")
     public ResponseEntity<List<String>> listAllCities() throws IOException {
         List<String> cities = service.getCities();
@@ -132,7 +134,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/logout")
+    @PostMapping("/logout")  //funkar
     public ResponseEntity<String> logout(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
         logoutService.logout(request, response, authentication);
         return ResponseEntity.ok("Logged out successfully");

@@ -24,7 +24,7 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String username; ////kanske behöver ändra detta till name
+    private String name; ////kanske behöver ändra detta till name
     private String email;
     private String password;
 
@@ -44,7 +44,7 @@ public class User implements UserDetails {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", username='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", role=" + role +
                 ", password=" + password +

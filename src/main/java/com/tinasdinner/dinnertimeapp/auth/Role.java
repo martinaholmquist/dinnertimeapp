@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static com.tinasdinner.dinnertimeapp.auth.Permission.*;
+
 @RequiredArgsConstructor
 public enum Role {
 
@@ -17,9 +19,9 @@ public enum Role {
 
     USER(
             Set.of(
-                    Permission.ADMIN_READ,
-                    Permission.ADMIN_UPDATE,
-                    Permission.ADMIN_CREATE
+                    USER_READ,
+                    USER_UPDATE,
+                    USER_CREATE
             )
     ),
 

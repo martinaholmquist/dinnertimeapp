@@ -86,7 +86,7 @@ public class UserService {
 
                     return new UserViewRecord(
                             user.getId(),
-                            user.getUsername(),
+                            user.getName(),
                             user.getEmail(),
                             user.getPassword(),
                             user.getRole(),
@@ -112,7 +112,7 @@ public class UserService {
 
                     return new AllUserInformationRecord(
                             user.getId(),
-                            user.getUsername(),
+                            user.getName(),
                             user.getEmail(),
                             city,
                             familymembers,
