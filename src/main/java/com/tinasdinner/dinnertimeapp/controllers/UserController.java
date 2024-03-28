@@ -2,7 +2,7 @@ package com.tinasdinner.dinnertimeapp.controllers;
 
 
 
-import com.tinasdinner.dinnertimeapp.familyInformation.FamilyInfo;
+import com.tinasdinner.dinnertimeapp.models.FamilyInfo;
 import com.tinasdinner.dinnertimeapp.models.User;
 import com.tinasdinner.dinnertimeapp.records.AllUserInformationRecord;
 import com.tinasdinner.dinnertimeapp.records.ChangePasswordReq;
@@ -16,7 +16,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 

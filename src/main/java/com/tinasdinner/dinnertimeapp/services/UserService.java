@@ -1,9 +1,9 @@
 package com.tinasdinner.dinnertimeapp.services;
 
 
-import com.tinasdinner.dinnertimeapp.familyInformation.FamilyInfo;
-import com.tinasdinner.dinnertimeapp.familyInformation.FamilyRepository;
-import com.tinasdinner.dinnertimeapp.familyInformation.InfoRepository;
+import com.tinasdinner.dinnertimeapp.models.FamilyInfo;
+
+import com.tinasdinner.dinnertimeapp.repositories.InfoRepository;
 import com.tinasdinner.dinnertimeapp.records.AllUserInformationRecord;
 import com.tinasdinner.dinnertimeapp.records.ChangePasswordReq;
 import com.tinasdinner.dinnertimeapp.records.UserViewRecord;
@@ -36,8 +36,9 @@ public class UserService {
     private final UserRepository repository;
     private final LogoutService logoutService;
 
-    private final FamilyRepository familyRepository;
+    //private final FamilyRepository familyRepository;
     private final InfoRepository infoRepository;
+
 
     public Optional UserInformation (Principal connectedUser) {
         var ofConnectedUser = (User) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal();
@@ -127,12 +128,17 @@ public class UserService {
     }
 
     public List<String> getCities() throws IOException {
-        List<String> cityList = familyRepository.findAllCities();
+       // List<String> cityList = familyRepository.findAllCities();
+        List<String> cityList = infoRepository.findAllCities();
+
         return cityList;
     }
 
     public List<String> getPreferences() throws IOException {
-        List<String> preferenceList = familyRepository.findAllPreferences();
+       // List<String> preferenceList = familyRepository.findAllPreferences();
+        List<String> preferenceList = infoRepository.findAllPreferences();
+
+
         return preferenceList;
     }
 

@@ -1,7 +1,6 @@
 package com.tinasdinner.dinnertimeapp.models;
 
 import com.tinasdinner.dinnertimeapp.auth.Role;
-import com.tinasdinner.dinnertimeapp.familyInformation.FamilyInfo;
 import com.tinasdinner.dinnertimeapp.token.Token;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

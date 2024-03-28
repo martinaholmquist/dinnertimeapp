@@ -35,10 +35,10 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(req ->
                         req
                                 //.requestMatchers(DELETE, "/api/v1/management/**").hasAnyAuthority(ADMIN_DELETE.name())
-                                .requestMatchers("/api/v1/users/alluserinfo").permitAll()
-                               .requestMatchers("/api/v1/users/allusers").permitAll()
-                                .requestMatchers("/api/v1/users/cities").permitAll()
-                                .requestMatchers("/api/v1/users/preferences").permitAll()
+                               // .requestMatchers("/api/v1/users/alluserinfo").permitAll()
+                              // .requestMatchers("/api/v1/users/allusers").permitAll()
+                                //.requestMatchers("/api/v1/users/cities").permitAll()
+                               // .requestMatchers("/api/v1/users/preferences").permitAll()
                                 .requestMatchers("/api/v1/auth/authenticate").permitAll()
                                 .requestMatchers("/api/v1/auth/register").permitAll()
 

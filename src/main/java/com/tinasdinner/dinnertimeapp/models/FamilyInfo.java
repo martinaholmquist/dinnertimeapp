@@ -1,6 +1,5 @@
-package com.tinasdinner.dinnertimeapp.familyInformation;
+package com.tinasdinner.dinnertimeapp.models;
 
-import com.tinasdinner.dinnertimeapp.models.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
